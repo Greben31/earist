@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    
+    <title>PADIDA'S LOG IN FORM</title>
+
+    <meta charset="UTF-8"/>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<body id="body">
+    
+    <center><div id=form>
+    <br /><br /><br />
+        
+        <center><font color=black><h1>LOG IN</h1></font></center>
+
+
+    <form>
+    
+
+        <center><label for="username">USERNAME:</label><br /></center>
+
+        <center><input placeholder="enter mona hayp ka" type="text" id="username" name="username"/><br /><br /></center>
+
+        <center><label for="password">PASSWORD:</label><br /></center>
+
+        <center><input placeholder="tandaan mo pass mo ah" type="password" id="password" name="password"/><br /><br /></center>
+
+        <center><input type="checkbox" id="remember" name="remember"/><label for="remember">REMEMBER ME (KAPAG NAG-IISA)</label><br /><br /></center>   
+ 
+
+        <center><button id="submit" type="button" onclick="checkLogin()">SUBMIT</button>
+                
+        <button id="cancel" type="reset" onclick="clearForm()">CANCEL</button>
+            <br /><br /><br /><br /><br /></center>
+    
+    </form>
+        
+
+        </div></center>
+        
+        
+<style>
+        
+    /* THE CONTENT AND BACKGROUND OF THE SITE */
+    #body
+    {
+    background:linear-gradient(to right,#382E0E,#E8B735);
+    font-family:Arial;
+    } 
+    /* THE BOX IN THE MIDDLE OF THE SITE, WITH LOGIN CONTENTS */
+    #form
+    {
+    background:linear-gradient(to right,#382E0E,#E8B735);
+    align-content:center;
+    width:30%;
+    border-radius:50px;
+    border:none;
+    }
+    /* SUBMIT BUTTON FOR THE LOG IN FORM */
+    #submit
+    {
+    background-color: chartreuse;
+    cursor: pointer;
+    width:20%;
+    padding:10px;
+    border:none;
+    }
+    /* CANCEL BUTTON FOR THE LOG IN FORM */
+    #cancel   
+    {
+    background-color:crimson;
+    cursor: pointer;
+    width:20%;
+    padding:10px;
+    border:none;
+    }
+    /* TEXTBOX FOR PASSWORD INPUT */
+    #password
+    {
+    width:90%;
+    padding:10px;
+    }
+    /* TEXTBOX FOR USERNAME INPUT */
+    #username
+    {
+    width:90%;
+    padding:10px;
+    }
+        
+</style>
+        
+<script>
+     var correctUsername="greben";
+     var correctPassword="136553121653";
+        
+     function checkLogin() {
+         
+     var enteredUsername = document.getElementById("username").value;
+     var enteredPassword = document.getElementById("password").value;
+         
+    if(enteredUsername === correctUsername && enteredPassword === correctPassword)       
+     
+     {window.location.href = "aboutme.html";}
+     
+     else {document.getElementById("error-message").style.display = "block";}
+         
+    }
+     function clearForm()   {
+     document.getElementById("username").value = "";
+     document.getElementById("password").value = "";
+     document.getElementById("error-message").style.display = "none";   
+    }
+</script> 
+        
+    
+        </body>
+
+</html>
